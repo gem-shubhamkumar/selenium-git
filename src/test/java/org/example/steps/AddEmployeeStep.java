@@ -16,6 +16,7 @@ public class AddEmployeeStep {
 
     @Given("User login with valid credentials")
     public void userLoginWithValidCredentials() {
+
         try {
             driver.findElement(LoginLocator.inputUsername).sendKeys(ConfigReader.getPropertyValue("username"));
             driver.findElement(LoginLocator.inputPassword).sendKeys(ConfigReader.getPropertyValue("password"));
@@ -23,6 +24,13 @@ public class AddEmployeeStep {
         } catch (Exception e) {
             throw new RuntimeException("Fail to login with valid credentials\n" + e);
         }
+
+        driver.findElement(LoginLocator.inputUsername).sendKeys(ConfigReader.getPropertyValue(
+                "username"));
+        driver.findElement(LoginLocator.inputPassword).sendKeys(ConfigReader.getPropertyValue(
+                "password"));
+        driver.findElement(LoginLocator.buttonLogin).click();
+
     }
 
     @And("User should navigate to dashboard page")
@@ -34,6 +42,5 @@ public class AddEmployeeStep {
     @When("Click on PIM Section")
     public void clickOnPIMSection() {
     }
-
 
 }
