@@ -4,6 +4,14 @@ Feature: Login in orangeHM
     Given User login with valid credentials
     And User should navigate to dashboard page
 
+    Scenario Outline: Login with empty password
+      Given User login with empty password
+      Then Verify "<message>" message should be visible in field "<field>"
+      Examples:
+       | message |field|
+       |Required | Password   |
+
+
   Scenario Outline: Login with empty password
     Given User login with empty password
     Then Verify "<message>" message should be visible in field "<field>"
@@ -24,3 +32,4 @@ Feature: Login in orangeHM
     Examples:
       | message  | fields            |
       | Required | Username,Password |
+

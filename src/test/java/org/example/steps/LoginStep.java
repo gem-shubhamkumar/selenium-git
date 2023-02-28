@@ -12,6 +12,7 @@ import static org.example.steps.Hooks.driver;
 import static org.junit.Assert.assertEquals;
 
 public class LoginStep {
+
     @Given("User login with empty password")
     public void userLoginWithEmptyPassword() {
         try{

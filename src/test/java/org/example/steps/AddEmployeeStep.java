@@ -21,11 +21,10 @@ import static org.junit.Assert.assertTrue;
 public class AddEmployeeStep {
     @Given("User login with valid credentials")
     public void userLoginWithValidCredentials() {
+
         try {
-            driver.findElement(LoginLocator.inputUsername).sendKeys(ConfigReader.getPropertyValue(
-                    "username"));
-            driver.findElement(LoginLocator.inputPassword).sendKeys(ConfigReader.getPropertyValue(
-                    "password"));
+            driver.findElement(LoginLocator.inputUsername).sendKeys(ConfigReader.getPropertyValue("username"));
+            driver.findElement(LoginLocator.inputPassword).sendKeys(ConfigReader.getPropertyValue("password"));
             driver.findElement(LoginLocator.buttonLogin).click();
         } catch (Exception e) {
             throw new RuntimeException("Fail to login with valid credentials\n" + e);
@@ -87,4 +86,5 @@ public class AddEmployeeStep {
     @And("Verify success notification {string}")
     public void verifySuccessNotification(String message) {
     }
+
 }
