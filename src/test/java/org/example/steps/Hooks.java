@@ -21,7 +21,6 @@ public class Hooks {
             throw new RuntimeException("Failed to load config properties.\n" + e);
         }
     }
-
     @Before(order = 1)
     public void setup() {
         try {
