@@ -21,6 +21,7 @@ import static org.junit.Assert.assertTrue;
 public class AddEmployeeStep {
     @Given("User login with valid credentials")
     public void userLoginWithValidCredentials() {
+
         try {
             driver.findElement(LoginLocator.inputUsername).sendKeys(ConfigReader.getPropertyValue("username"));
             driver.findElement(LoginLocator.inputPassword).sendKeys(ConfigReader.getPropertyValue("password"));
@@ -85,6 +86,5 @@ public class AddEmployeeStep {
     @And("Verify success notification {string}")
     public void verifySuccessNotification(String message) {
     }
-
 
 }
