@@ -10,7 +10,6 @@ Feature: Orange HRM Add Employee
     Then Enter employee details "<firstName>" "<middleName>" "<lastName>" and "<employeeId>"
     And Click on save button
     And Verify success notification "<message>"
-
     Examples:
       | firstName | middleName | lastName | employeeId |
       | First     | Middle     | Last     | EID001     |

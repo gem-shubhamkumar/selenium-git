@@ -12,7 +12,6 @@ import static org.example.steps.Hooks.driver;
 import static org.junit.Assert.assertEquals;
 
 public class ForgetPassword {
-
     @When("^User clicks on Forget your password link$")
     public void clicksOnForgetPassword() {
 

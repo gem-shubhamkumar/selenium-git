@@ -1,4 +1,4 @@
-Feature: Forget Password
+Feature: Forget Password TC
 
   Scenario: TC07 Forget password with valid username
     When User clicks on Forget your password link
